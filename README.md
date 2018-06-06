@@ -111,8 +111,16 @@ export default class App extends Component {
           duration={600}
          >
           <View style={styles.modalCard}>
-            <Text>I'm AnimatedModal</Text>
-            <Text style={{fontWeight: 'bold', marginTop: 10}}>horizontal</Text>
+            <Text>
+              I'm AnimatedModal
+            </Text>
+            <Text 
+              style={{
+                fontWeight: 'bold', 
+                marginTop: 10}}
+             >
+              horizontal
+            </Text>
           </View>
         </AnimatedModal>
       </View>
