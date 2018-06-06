@@ -1,4 +1,4 @@
-# react-native-animated-modal
+# react-native-modal-animated
 
 
 An animated and highly customizable react-native modal.  
@@ -12,22 +12,22 @@ An animated and highly customizable react-native modal.
 ## Demo
 
 <p align="center">
-<img src="https://github.com/rafalkaczynsky/react-native-animated-modal/blob/master/src/assets/ezgif.com-video-to-gif.gif" height="300" />
-<img src="https://github.com/rafalkaczynsky/react-native-animated-modal/blob/master/src/assets/horizontal.gif" height="300" />
-<img src="https://github.com/rafalkaczynsky/react-native-animated-modal/blob/master/src/assets/vertical.gif" height="300" />
+<img src="https://github.com/rafalkaczynsky/react-native-modal-animated/blob/master/src/assets/ezgif.com-video-to-gif.gif" height="300" />
+<img src="https://github.com/rafalkaczynsky/react-native-modal-animated/blob/master/src/assets/horizontal.gif" height="300" />
+<img src="https://github.com/rafalkaczynsky/react-native-modal-animated/blob/master/src/assets/vertical.gif" height="300" />
 </p>
 
 ## Setup
 
-This library is available on npm, install it with: `npm install --save react-native-animated-modal` or `yarn add react-native-animated-modal`.
+This library is available on npm, install it with: `npm install --save react-native-modal-animated` or `yarn add react-native-modal-animated`.
 
 ## Usage
 
 
-1. Import react-native-animated-modal:
+1. Import react-native-modal-animated:
 
 ```javascript
-import {AnimatedModal} from "react-native-animated-modal";
+import {AnimatedModal} from "react-native-modal-animated";
 ```
 
 2. Create a modal and nest its content inside of it:
