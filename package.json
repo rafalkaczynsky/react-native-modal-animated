@@ -6,6 +6,25 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest"
   },
+  "keywords": [
+    "react-native",
+    "react",
+    "animated-modal",
+    "react-native-animated-modal",
+    "modal",
+    "android",
+    "ios",
+    "backdrop",
+    "simple",
+    "animated"
+  ],
+  "author": "Rafal Kaczynsky",
+  "license": "MIT",
+  "homepage": "https://github.com/rafalkaczynsky/react-native-animated-modal",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rafalkaczynsky/react-native-animated-modal"
+  },
   "devDependencies": {
     "babel-jest": "23.0.1",
     "babel-preset-react-native": "4.0.0",
