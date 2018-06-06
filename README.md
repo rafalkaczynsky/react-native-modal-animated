@@ -12,7 +12,9 @@ An animated and highly customizable react-native modal.
 ## Demo
 
 <p align="center">
-
+<img src="https://github.com/rafalkaczynsky/react-native-animated-modal/blob/master/src/assets/ezgif.com-video-to-gif.gif" height="300" />
+<img src="https://github.com/rafalkaczynsky/react-native-animated-modal/blob/master/src/assets/horizontal.gif" height="300" />
+<img src="https://github.com/rafalkaczynsky/react-native-animated-modal/blob/master/src/assets/vertical.gif" height="300" />
 </p>
 
 ## Setup
