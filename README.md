@@ -38,7 +38,7 @@ render () {
       <View>
         <AnimatedModal>
           <View>
-            <Text>I'm AnimatedModal</Text>
+            <Text>I am AnimatedModal</Text>
           </View>
         </AnimatedModal>
       </View>
@@ -54,7 +54,7 @@ render () {
       <View>
         <AnimatedModal visible={true}>
           <View style={{width: 200, height: 150}}>
-            <Text>I'm AnimatedModal</Text>
+            <Text>I am AnimatedModal</Text>
           </View>
         </AnimatedModal>
       </View>
@@ -112,7 +112,7 @@ export default class App extends Component {
          >
           <View style={styles.modalCard}>
             <Text>
-              I'm AnimatedModal
+              I am AnimatedModal
             </Text>
             <Text 
               style={{
