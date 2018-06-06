@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Animated, Easing, TouchableOpacity } from 'react-native';
+import { Animated, Easing, TouchableOpacity, StyleSheet } from 'react-native';
 export interface AnimatedModalProps {
   noAnimation?: boolean;
   visible: boolean;
   animationType?: string;
+  modalCardPosition?: string;
   style?: any;
   duration?: number;
   onBackdropPress: () => void;
@@ -47,7 +48,7 @@ export default class AnimatedModal extends Component<
   render() {
     const { visible, style, children, ...rest } = this.props;
 
-    let containerStyle;
+    let containerStyle, positionStyle;
 
     const defaultAnimationStyle = {
       opacity: this.visibility.interpolate({
@@ -133,6 +134,25 @@ export default class AnimatedModal extends Component<
         break;
     }
 
+    switch (this.props.modalCardPosition) {
+      case 'center':
+        positionStyle = styles.centerStyle;
+        break;
+
+      case 'bottom':
+        positionStyle = styles.bottomStyle;
+        break;
+
+      case 'top':
+        positionStyle = styles.topStyle;
+        break;
+
+      default:
+        positionStyle = styles.centerStyle;
+        break;
+    }
+    /** */
+
     const combinedStyle = [
       !this.props.noAnimation ? containerStyle : null,
       style
@@ -155,7 +175,7 @@ export default class AnimatedModal extends Component<
         style={this.state.visible ? layerStyle : null}
       >
         <Animated.View
-          style={this.state.visible ? combinedStyle : containerStyle}
+          style={[this.state.visible ? combinedStyle : containerStyle, positionStyle]}
           {...rest}
         >
           {this.state.visible ? children : null}
@@ -164,3 +184,34 @@ export default class AnimatedModal extends Component<
     );
   }
 }
+
+const styles = StyleSheet.create({
+  centerStyle: {
+    position: 'absolute',
+    zIndex: 100,
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  bottomStyle: {
+    position: 'absolute',
+    zIndex: 100,
+    left: 0,
+    right: 0,
+    bottom: 50,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  topStyle: {
+    position: 'absolute',
+    zIndex: 100,
+    left: 0,
+    right: 0,
+    top: 50,
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
+});
