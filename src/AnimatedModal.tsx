@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Animated, Easing, View } from 'react-native';
+import { Animated, Easing, TouchableOpacity } from 'react-native';
 export interface AnimatedModalProps {
   noAnimation?: boolean;
   visible: boolean;
@@ -149,14 +149,19 @@ export default class AnimatedModal extends Component<
     };
 
     return (
-      <View style={this.state.visible && !this.props.noBackground ? layerStyle : null}>
+      <TouchableOpacity
+        onPress={()=> this.setState({visible: !this.state.visible})}
+        style={
+          this.state.visible && !this.props.noBackground ? layerStyle : null
+        }
+      >
         <Animated.View
           style={this.state.visible ? combinedStyle : containerStyle}
           {...rest}
         >
           {this.state.visible ? children : null}
         </Animated.View>
-      </View>
+      </TouchableOpacity>
     );
   }
 }
