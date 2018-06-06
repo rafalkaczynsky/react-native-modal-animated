@@ -6,7 +6,7 @@ export interface AnimatedModalProps {
   animationType?: string;
   style?: any;
   duration?: number;
-  noBackground?: boolean;
+  onBackdropPress: () => void;
 }
 export interface AnimatedModalState {
   visible: boolean;
@@ -150,10 +150,8 @@ export default class AnimatedModal extends Component<
 
     return (
       <TouchableOpacity
-        onPress={()=> this.setState({visible: !this.state.visible})}
-        style={
-          this.state.visible && !this.props.noBackground ? layerStyle : null
-        }
+        onPress={this.props.onBackdropPress}
+        style={this.state.visible ? layerStyle : null}
       >
         <Animated.View
           style={this.state.visible ? combinedStyle : containerStyle}
