@@ -150,6 +150,7 @@ export default class AnimatedModal extends Component<
 
     return (
       <TouchableOpacity
+        activeOpacity={1}
         onPress={this.props.onBackdropPress}
         style={this.state.visible ? layerStyle : null}
       >
