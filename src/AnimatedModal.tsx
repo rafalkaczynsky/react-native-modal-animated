@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
-import { Animated, Easing } from 'react-native';
+import { Animated, Easing, View } from 'react-native';
 export interface AnimatedModalProps {
   noAnimation?: boolean;
   visible: boolean;
   animationType?: string;
   style?: any;
   duration?: number;
+  noBackground?: boolean;
 }
 export interface AnimatedModalState {
   visible: boolean;
 }
-export default class AnimatedModal extends Component<AnimatedModalProps, AnimatedModalState> {
+export default class AnimatedModal extends Component<
+  AnimatedModalProps,
+  AnimatedModalState
+> {
   visibility: Animated.Value;
   state;
   props;
   setState;
-  
+
   constructor(props) {
     super(props);
     this.state = {
@@ -134,13 +138,25 @@ export default class AnimatedModal extends Component<AnimatedModalProps, Animate
       style
     ];
 
+    const layerStyle = {
+      position: 'absolute',
+      zIndex: 99,
+      top: 0,
+      bottom: 0,
+      left: 0,
+      right: 0,
+      backgroundColor: `rgba(0,0,0,0.5)`
+    };
+
     return (
-      <Animated.View
-        style={this.state.visible ? combinedStyle : containerStyle}
-        {...rest}
-      >
-        {this.state.visible ? children : null}
-      </Animated.View>
+      <View style={this.state.visible && !this.props.noBackground ? layerStyle : null}>
+        <Animated.View
+          style={this.state.visible ? combinedStyle : containerStyle}
+          {...rest}
+        >
+          {this.state.visible ? children : null}
+        </Animated.View>
+      </View>
     );
   }
 }

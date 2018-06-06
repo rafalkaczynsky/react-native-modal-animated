@@ -1,0 +1,1 @@
+export { default as AnimatedModal}  from './src/AnimatedModal'
