@@ -46,7 +46,7 @@ render () {
   }
 ```
 
-3. Then simply show it by setting the `isVisible` prop to true:
+3. Then simply show it by setting the `visible` prop to true:
 
 ```javascript
 render () {
@@ -150,7 +150,6 @@ const styles = StyleSheet.create({
 
 ```
 
-For a more complex example take a look at the `/example` directory.
 
 ## Available props
 
