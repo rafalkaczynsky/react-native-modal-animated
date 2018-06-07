@@ -1,6 +1,6 @@
 {
   "name": "react-native-modal-animated",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest"
@@ -40,7 +40,5 @@
     "url": "https://github.com/rafalkaczynsky/react-native-modal-animated/issues"
   },
   "main": "index.js",
-  "dependencies": {
-  
-  }
+  "dependencies": {}
 }
